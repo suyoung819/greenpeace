@@ -1,0 +1,284 @@
+@charset="utf-8";
+@font-face {src:url("../ect/font/JejuGothic.ttf"); font-family:"jejugothic"}
+@font-face {src:url("../ect/font/NanumSquareB.ttf"); font-family:"nanumsquareB"}
+@font-face {src:url("../ect/font/NanumSquareEB.ttf"); font-family:"nanumsquareEB"}
+
+html,body,#fullpage {margin: 0; padding: 0;}
+*{font-family: nanumsquareB;}
+
+
+
+@media screen and (max-width:800px){
+
+.mo_none {display: none;}
+
+
+
+
+/* >>> MAIN <<< */
+#main {width: 100%; height: 100%; background: url("../image/main_bg_img_penguin.jpg"); background-size: cover; background-repeat: no-repeat;background-position: right center;}
+#main > div {width: 100%; height: 100%; background: rgba(102, 204, 1, 0.6); position: relative;}
+
+#logo {width: 100%; height: 280px; text-align: center; position: relative; top: 30%; background: url(../image/greenpeace.png); background-size: contain;  background-repeat: no-repeat; background-position: center; animation: fadeInDown 1s;}
+
+#scrol {background: url(../image/arrow-down.png); width: 30px; height: 30px; margin: 0 auto; background-size: contain; position: absolute; bottom: 20%; left: 50%; transform: translateX(-50%); animation: scrol 1.8s infinite; opacity: 0}
+
+@keyframes scrol {
+    30% {transform: translate(-50%, 60%); opacity: 0.9}
+    50% {transform: translate(-50%, 50%); opacity: 1}
+    70% {transform: translate(-50%, 70%); opacity: 1}
+    100% {transform: translate(-50%, 0%); }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+
+
+
+
+
+/* >>> NAVIGATION  <<< */
+nav {width: 100%; height: 50px; background-color: #fff; border-bottom: 0.5px solid #ddd; box-sizing: border-box; z-index: 99; position: relative; padding-top: 15px}
+nav ul {width: 20%; list-style: none; margin: 0 auto; padding: 0;}
+.sticky {position: fixed; top: 0;}
+
+#nav_logo {height: 30px; margin: 0 auto; text-align: center; background:url(../image/greenpeace_logo.png);  background-repeat: no-repeat; background-size: contain;}
+nav a {text-decoration: none; color: #000; font-family:jejugothic; display: block;}
+
+#nchk {display: none;}
+#nchk+label {width: 50px; height: 50px; position: absolute; top: 0; right: 0; text-align: center; font-size: 15px; color: #6c0; line-height: 50px; cursor: pointer; transition: 0.3s}
+
+#nchk:checked+label {transform: rotate(180deg)}
+#nchk:checked~div {height: 280px; border: 0.5px solid #ddd; border-top: 0px;}    
+    
+#m_nav {position: absolute; top:50px; right: 0px; width: 50%; height: 0; overflow: hidden; background: #fff; border: 0px solid transparent; transition: 0.5s}
+#m_nav div {width: 100%; height: 70px; font-size: 20px; text-align: center; line-height: 70px; box-sizing: border-box; letter-spacing: 1.5px;}
+
+#nsup {position: fixed; left: 0; bottom: -100px; width: 100%; height: 45px; background: #ffd800; text-align: center; line-height: 45px; letter-spacing: 1.5px; box-sizing: border-box; transition: 0.3s}
+#nsup > a {display: block; font-size: 30px;}
+
+
+
+
+
+
+
+
+/* >>>  INTRODUCE <<<  */
+#intro {background: #fff; width: 100%; height: auto; display: block; padding-top: 80px; padding-bottom: 50px; box-sizing: border-box;}
+#intro > div {width: 90%; height: auto; margin: 0 auto; position: relative;}
+
+#intro_title {width: 250px; display: block; background: #6c0; color: #fff; font-size: 50px; font-family: nanumsquareEB; text-align: center; padding: 5px; position: absolute; right: 0; top: 350px;}
+#intro_img {width: 80%; height: 400px; float: left; line-height: 0; background: url(../image/intro_img.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; margin-bottom: 50px;}
+#intro_txt {background: #fff; clear: both; width: 100%; height: auto; display: table; font-size: 18px; line-height: 30px; text-align: left; padding: 0 15px;}
+#intro_txt b {color: #6c0; font-family: nanumsquareEB; letter-spacing: 0.7px;}
+
+#intro ul {clear: both; height: auto; padding: 0; margin: 0; list-style: none; }
+#intro ul > li {width: 100%; height: 160px; margin: 0 auto; text-align: center; padding-top: 20px; }
+#intro ul > li > b {font-size: 80px; font-family: nanumgothicEB; color: #6c0; line-height: 80px;}
+#intro ul > li:nth-child(2) {border-top: #ddd 2px solid; border-bottom: #ddd 2px solid; }
+#intro ul > li span {font-size: 50px; line-height: 50px; vertical-align: middle;}
+
+
+
+
+
+/* >>>  CAMPAIGN  <<< */
+#campaign {width: 100%; height: auto; background: #828282; display: table;}
+#campaign > div:first-child {height: 50px; background: #fff;}
+
+#banner {width: 100%; height: 600px; overflow: hidden;}
+.banner_wrap {width: 400%; height: 600px; position: relative;}
+#banner1 {width: 25%; height: 600px; background: url(../image/banner_mo1.jpg); overflow: hidden; background-position: center; background-size: cover; background-repeat: no-repeat; line-height: 0; float: left;}
+#banner_time {width: 100%; height: 13px;}
+#banner_time > a {width: 25%; height: 13px; background: #fff; float: left;}
+#banner_time > a:first-child {background: #6c0;}
+
+#newsletter {width: 90%; height: auto; margin: 0 auto; margin-top: 45px; color: #fff;}
+#letter_title {float: left; vertical-align: middle; font-size: 18px; margin-bottom: 20px;}
+#letter_title > span {font-size: 50px; line-height: 85px; font-family: nanumsquareEB;}
+
+#letter_input > input {width: 100%; height: 40px; margin: 10px 0; color: #828282; text-align: right; font-size: 18px; padding: 0 10px; box-sizing: border-box;}
+
+#checked {padding: 10px 0; width: 100%;}
+#checked > input {float: left; width: 15px; height: 15px; cursor: pointer; margin-bottom: 20px;}
+#checked > input:nth-of-type(2) {margin-left: 10px;}
+#checked > label {font-size: 15px; float: left; line-height: 0px; margin-top: 13px; margin-left: 3px; margin-bottom: 20px;}
+
+#checked > a {display: block; cursor: pointer; clear: both; margin: 0 auto;  width: 100%; height: 50px; border: 5px solid #fff; box-sizing: border-box; text-align: center; font-size: 25px; letter-spacing: 3px; line-height: 40px; margin-bottom: 20px;}
+
+
+
+
+
+
+
+
+/* >>>  INFORMATION <<< */
+#info {width: 100%; height: auto; background: #6c0; padding-top: 100px; padding-bottom: 100px; box-sizing: border-box; display: table;}
+
+#info_title {display: table; font-size: 50px; margin: 0 auto; font-family: nanumsquareEB; color: #fff; margin-bottom: 50px;}
+
+#info_box {width: 90%; height: 100%; margin: 0 auto; }
+#info_box ul {list-style: none; width: 100%; margin: 0 auto; padding: 0;}
+#info_box ul > li {float: left; margin-bottom: 20px; width: 25%; }
+
+#info_box ul > li img {float: left; max-width: 100%; }
+#ani {width: 100%; height: 100%; z-index: 2; box-sizing: border-box; transition: all 0.2s;}
+.ani {border: 5px rgba(255, 255, 255,0);}
+.ani2 {border: 5px #fff solid; transform: scale(0.8);}
+
+
+
+#info_content > div {width: 100%; padding: 0; margin:0; clear: both; overflow: hidden; background-repeat: no-repeat; background-size: cover; background-position: center;}
+.tab_content {height: 0px; position: absolute; opacity: 0.5; }
+.tab_content2 {height: auto; display: block; transition: 1s; position: relative; opacity: 1; z-index: 3;}
+#itab1 {background: url(../image/climate.png);}
+#itab2 {background: url(../image/ocean.png);}
+#itab3 {background: url(../image/pollutant.png);}
+#itab4 {background: url(../image/forest.png);}
+
+#itab_box1 {width: 90%; height: auto; background: #fff; margin: 0 auto; z-index: 1}
+#itab_box2 {width: 90%; height: auto; background: #fff; margin: 0 auto; z-index: 1}
+#itab_box1 > div {width: 85%; margin: 0 auto; padding-top: 60px; box-sizing: border-box;}
+#itab_box2 > div {width: 85%; margin: 0 auto; padding-top: 60px; box-sizing: border-box;}
+#itab_title1 {background: #6c0; display: table; padding: 7px; font-size: 40px; color: #fff; font-family: nanumsquareEB; float: right; margin-bottom: 30px;}
+#itab_title2 {background: #6c0; display: table; padding: 7px; font-size: 40px; color: #fff; font-family: nanumsquareEB; float: left; margin-bottom: 30px;}
+#itab_main1 {font-size: 18px; line-height: 33px; text-align:right; letter-spacing: -0.25px; clear: both; padding-bottom: 40px;}
+#itab_main2 {font-size: 18px; line-height: 33px; letter-spacing: -0.25px; clear: both; padding-bottom: 40px;}
+
+#itab_bot_box {width: 100%; height: auto; background: rgba(255, 255, 255, 0.5); display: table; padding-bottom: 3%; box-sizing: border-box;}
+#itab_bot_box > div {width: 75%; height: auto; margin: 0 auto; margin-top: 3%;}
+#itab_bot_txt {float: left; width: 45%; height: auto; display: table; font-size: 18px; line-height: 33px;}
+#itab_bot_txt2 {float: left; width: 100%; height: auto; display: table; font-size: 18px; line-height: 33px;}
+#itab_bot_txt > span {font-size: 26px; font-family: nanumsquareEB; line-height: 60px; text-decoration: underline;}
+#itab_bot_txt2 > span {font-size: 26px; font-family: nanumsquareEB; line-height: 60px; text-decoration: underline;}
+#itab_bot_txt:nth-child(2) {float: right;}
+
+
+
+
+
+
+
+/* >>> NEWS <<< */
+
+
+#news {width: 100%; height: auto; position: relative; padding: 150px 0;}
+#news_wrap {width: 90%; margin: 0 auto; height: auto; display: table;}
+
+#activist {width: 100%; height: auto; display: table; overflow: hidden; margin: 0 auto; position: relative;}
+#yeon {width: 100%; height: 700px; background: url(../image/yeonsik.jpg); background-repeat: no-repeat; background-position: center center; background-size: cover; }
+#act_txt {float: right; width: 100%; position: absolute; bottom: 0; background: rgba(255, 255, 255, 0.7); padding: 5%; box-sizing: border-box;}
+#at1 {font-size: 25px; text-align: right; line-height: 40px;}
+#at1 > span {font-size: 30px; font-family: nanumsquareEB; color: #6c0; line-height: 30px;}
+#at2 {font-size: 18px; text-align: right; margin: 10px 0; color: #6c0;}
+#at3 {font-size: 18px; line-height: 33px; text-align: left; letter-spacing: -0.5px;}
+
+#news_box {width: 100%; height: auto; display: table; border-top: 10px solid #6c0; border-bottom: 10px solid #6c0; background: #6c0; margin-top: 180px; position: relative;}
+#news_img {width: 25%; height: 150px; float: left; background-repeat: no-repeat; cursor: pointer;}
+#news_img > div {width: 100%; height: 100%; position: relative; transform: scale(0.7, 0.7); transition: 0.4s}
+#news_img > div > p:first-child {position: absolute; bottom: 10%; right: 10%; text-align: left; color: transparent; font-size: 30px; font-family: jejugothic; font-style: italic;}
+#news_img > div > p:last-child {display: none;}
+
+#news_img:nth-child(1) {background: url(../image/news/ston.jpg); background-position: center right;}
+#news_img:nth-child(2) {background: url(../image/news/antarctic-ship.jpg); background-position: left bottom; }
+#news_img:nth-child(3) {background: url(../image/news/a.jpg); background-position: center center; background-size: cover;}
+#news_img:nth-child(4) {background: url(../image/news/womens.jpg); background-position: center center; background-size: cover;}
+#news_img:nth-child(5) {background: url(../image/news/penguin.jpg); background-position: center center; background-size: cover;}
+#news_img:nth-child(6) {background: url(../image/news/Ryu.jpg); background-position: center center; background-size: cover;}
+#news_img:nth-child(7) {background: url(../image/news/ship.jpg); background-position: center center; background-size: cover;}
+#news_img:nth-child(8) {background: url(../image/news/north-bear.jpg); background-position: center center; background-size: cover;}
+#news_img:nth-child(10) {background: url(../image/news/north.jpg); background-position: center center; background-size: cover;}
+#news_img:nth-child(11) {background: url(../image/news/interveiw.jpg); background-position: center center; background-size: cover;}
+#news_img:nth-child(12) {background: url(../image/news/campain.jpg); background-position: center center; background-size: cover;}
+
+#news_img:nth-child(9) {width: 100%; height: 50px; background: #6c0; position: absolute; top: -60px;}
+#news_img:nth-child(9) > span {color: #fff; font-size: 30px; font-family: nanumsquareEB; margin: 0 auto; display: table; margin-top: 10px;}
+
+
+
+
+
+
+
+/* >>> SUPPORT <<< */
+#support {width: 100%; height: auto; background-size: contain; background: url(../image/suport_bg_img_tutle.jpg); line-height: 0; display: block; background-position: center top;}
+#support_bg {width: 100%; height: auto; background: rgba(102, 204, 0, 0.6); position: relative; border-top:#ffd800 solid 13px; box-sizing: border-box; padding-bottom: 100px;}
+
+#support_bg > div {width: 90%; height: auto; display: table;  margin: 0 auto; }
+#stitle {color: #fff; font-size: 40px; font-family: nanumsquareEB; position: absolute; top: 100px; margin-bottom: 50px;}
+
+#sbox {width: 100%; height: 730px;  margin-top: 200px; margin-bottom: 70px;}
+
+/* @후원 폼@ */
+#smain {width: 100%; height: 100%; background: #fff; float: left; position: relative; margin: 0 auto;}
+#smain input[type="radio"] {display: none;}
+#smain ul {list-style: none; padding: 0; margin: 0;}
+#smain > ul {width: 90%; margin: 0 auto; margin-top: 20px;}
+
+input[name="support"]+label {width: auto; height: auto;}
+input[name="support"]+label div {width: 60px; height: 60px; background: #6c0; border-radius: 100%; text-align: center; line-height: 60px; color: #fff; font-size: 30px; margin: 20px; float: left;}
+input[name="support"]+label span {display: block; font-size: 22px; color: #6c0; float: left; margin-top: 35px;}
+
+input[name="support"]:checked+label > div {background: #ffd800; transform: scale(1.3, 1.3);}
+input[name="support"]:checked+label > span {color: #ffd800;}
+#schk1:checked~div {height: 380px;}
+#schk2:checked~div {height: 400px;}
+#schk3:checked~div {height: 150px;}
+
+#smain li > div {clear: both; position: relative; width: 80%; height: 0px; overflow: hidden; margin: 0 auto; transition: all 0.3s;}
+#smain li > div > ul {clear: both; padding: 20px 0;}
+
+#sprev {width: 30%; height: 40px; background: #aaaaaa; text-align: center; line-height: 40px; position: absolute; left: 0; bottom: 0; cursor: pointer; border-right: 2px solid #fff; box-sizing: border-box; color: #fff; font-size: 18px;}
+#snext {width: 70%; height: 40px; background: #ffd800; text-align: center; line-height: 40px; position: absolute; right: 0; bottom: 0; cursor: pointer; color: #fff; font-size: 18px;}
+
+/* @@@후원금액@ */
+input[name="1-1"]+label {float: left; width: 50%; height: 40px; text-align: center; border: 2px #6c0 solid; color: #6c0; box-sizing: border-box; line-height: 40px; font-size: 18px;}
+input[name="1-1"]:checked+label {background: #6c0; color: #fff;}
+
+input[name="1-2"]+label {float: left; width: 33.3%; height: 125px; border: 2px solid #6c0; box-sizing: border-box; color: #6c0; text-align: center; line-height: 125px; background: #fff; margin-top: 20px; font-size: 22px;}
+
+input[name="1-2"]:checked+label {background: #6c0; color: #fff; font-size: 25px;}
+
+#schk1-6 {clear: both; margin: 25px 0; width: 80%; height: 40px; border: 2px #6c0 solid; box-sizing: border-box; text-align: right; padding: 3px 8px; font-size: 18px;}
+#stxt {color: #6c0; font-size: 18px; padding: 5px;}
+
+/* @@@후원자 정보@ */
+#schk2-1 li {margin: 25px 10px;}
+#schk2-1 li:first-child {margin-top: 0;}
+#schk2-1 li > span {font-size: 20px; margin: 15px 0; color: #6c0; display: table; }
+#schk2-1 li > input {width: 100%; height: 35px; box-sizing: border-box; text-align: right;font-size: 18px; border: 2px #6c0 solid; padding: 3px 8px}
+
+/* @@@결재 방식@ */
+input[name="3-1"]+label {float: left; width: 50%; height: 40px; text-align: center; border: 2px #6c0 solid; color: #6c0; box-sizing: border-box; line-height: 40px; font-size: 18px;}
+input[name="3-1"]:checked+label {background: #6c0; color: #fff;}
+
+/* @@ ----- @@ */
+
+#ssub {width: 100%; min-height: 50%; height: auto; display: table; float: left; margin: 0 auto; background: #ddd; padding-bottom: 20px;}
+#ssub > img {width: 100%; height: 50%; overflow: hidden;}
+#ssub > p {width: 80%; margin: 0 auto; font-size: 17px; line-height: 30px; margin-top: 40px; letter-spacing: -0.7px;}
+#ssub > p:last-child {font-size: 13px; color: #828282; line-height: 25px; margin-top: 20px;}
+
+
+
+
+
+
+
+
+
+
+
+}
